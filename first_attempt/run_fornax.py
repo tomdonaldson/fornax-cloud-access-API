@@ -18,7 +18,7 @@ table_result = query_result.to_table()
 
 
 # data handler
-row = table_result[0]
+row = table_result[5]
 
 line = '+'*40
 print(f'\n{line}\nData product:\n{line}')
