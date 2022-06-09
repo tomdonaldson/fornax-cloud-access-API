@@ -30,10 +30,10 @@ print(f'{line}\n')
 
 
 # inject a differnt region name; easier to do here than on the server
-row_1['cloud_access'] = row_1['cloud_access'].replace('us-east-1', 'us-east-2')
+#row_1['cloud_access'] = row_1['cloud_access'].replace('us-east-1', 'us-east-2')
 file = fornax.AWSDataHandler(row_1).download()
 
 
 # inject a differnt bucket name; easier to do here than on the server
-row_2['cloud_access'] = row_2['cloud_access'].replace('heasarc', 'heasarc2')
-file = fornax.AWSDataHandler(row_2).download()
+#row_2['cloud_access'] = row_2['cloud_access'].replace('heasarc', 'heasarc2')
+#file = fornax.AWSDataHandler(row_2).download()
