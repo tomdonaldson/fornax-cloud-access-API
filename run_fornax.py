@@ -32,3 +32,13 @@ print(f'{line}\n')
 handler = fornax.AWSDataHandler(data_product)
 handler._summary()
 handler.download()
+
+
+## test access with credentials:
+## heasarc-1 is at us-west-2 and allows cross region access with credentials (ngaps).
+## Generate credentials in Kion and put them in a profile called ngap_temp_user in ~/.aws/credentials.
+## Here we change the bucket name manually for testing
+# data_product['cloud_access'] = data_product['cloud_access'].replace('dh-fornaxdev', 'heasarc-1')
+# handler = fornax.AWSDataHandler(data_product, profile='ngap_temp_user')
+# handler._summary()
+# handler.download()
