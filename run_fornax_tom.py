@@ -16,7 +16,8 @@ print(f'\nUsing fornax library in: {fornax.__file__}\n')
 #query_result = pyvo.dal.sia.search('https://heasarc.gsfc.nasa.gov/xamin_test/vo/sia?table=chanmaster&', pos=pos)
 
 pos = coord.SkyCoord.from_name("m61")
-query_result = pyvo.dal.sia.search('http://127.0.0.1:8080/VoQuery.asmx/SiaV1?MISSION=HST&', pos=pos, size=0.0)
+query_result = pyvo.dal.sia.search('https://mast.stsci.edu/portal_vo/Mashup/VoQuery.asmx/SiaV1?MISSION=HST&', pos=pos, size=0.0)
+
 table_result = query_result.to_table()
 access_url_column = query_result.fieldname_with_ucd('VOX:Image_AccessReference') or 'access_url'
 
